@@ -1,27 +1,54 @@
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+@font-face { /* Custom font definition */
+    font-family: 'Pirata One';  /* Font family name */
+    src: url('fonts/Pirata_One/PirataOne-Regular.ttf') format('truetype-variations'); /* Path to the font file */
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Rubik Mono One';  /* Font family name */
+    src: url('fonts/RubikMonoOne/RubikMonoOne-Regular.ttf') format('truetype-variations'); /* Path to the font file */
+}
+
+@font-face {
+    font-family: 'Open Sans';  /* Font family name */
+    src: url('fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype-variations'); /* Path to the font file */
+}
+
 body {
-    background-color:rgb(11, 172, 241);
-    font-family: sans-serif;   /* font-family */
+    background: linear-gradient(to bottom, #0a192f, #0b78c3, #0a192f); /* vertical gradient from dark navy blue to bright blue and back */
+    background-size: cover;
+    background-attachment: fixed; /* Fixes the background during scrolling */
+    font-family: 'Open Sans', sans-serif;   /* font-family */
+    margin: 0; /* Removes default margin */
+    color: white; /* Default text color */
 }
 
 header {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px; /* padding right/left */
+    background-color: rgba(0, 0, 0, 0.50); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurs the background behind the footer */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    color: rgb(255, 255, 255);
+    padding: 20px 20px; /* padding right/left */
     text-align: center;
-    border-radius: 8px;
 }
 
 main {
     padding: 20px;
     min-height: 400px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 footer {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.50); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurs the background behind the footer */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    color: rgb(255, 255, 255);
     padding: 10px; /* padding all around */
     text-align: center;
-    border-radius: 8px;
     margin-top: 20px; /* Adds space above the footer */
 }
 
@@ -54,13 +81,13 @@ nav li {
 }
 
 nav a {
-    color: rgb(0, 0, 0); /* Makes the link text white */
+    color: rgb(255, 255, 255); /* Makes the link text white */
     text-decoration: none; /* Removes the default underline */
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ddd; /* Adds a slight gray color when you hover over a link */
+    color: #8cabff; /* Adds a slight gray color when you hover over a link */
 }
 
 /* --- Section Styles --- */
@@ -68,7 +95,10 @@ nav a:hover {
 section {
     padding: 40px 20px; /* Adds internal spacing (top/bottom - left/right) */
     margin: 20px 0; /* Adds external spacing between sections */
-    background-color: #ffffff; /* Gives each section a white background */
+    background-color: rgba(0, 0, 0, 0.50); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurs the background behind the footer */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    color: rgb(255, 255, 255);
     border-radius: 8px; /* Rounds the corners of the sections */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow */
 }
@@ -97,11 +127,13 @@ section h2 {
 }
 
 .project-card {
-    background-color: #f9f9f9; /* A very light gray for the card background */
-    border: 1px solid #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.056); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurs the background behind the footer */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    border: 1px solid #061429;
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Ensures the image's corners are also rounded */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* A very subtle shadow */
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.05); /* A very subtle shadow */
     /* This transition is for the animation you wanted */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -129,7 +161,7 @@ section h2 {
 
 .project-info p {
     font-size: 0.9em;
-    color: #555;
+    color: #ffffff;
     line-height: 1.5;
 }
 
@@ -202,12 +234,184 @@ section h2 {
 .cv-item p {
     margin: 5px 0;
     font-size: 0.9em;
-    color: #555;
+    color: #ffffff;
 }
 
 .cv-item ul {
     margin-top: 10px;
     padding-left: 20px; /* Indent the bullet points */
     font-size: 0.9em;
-    color: #555;
+    color: #ffffff;
+}
+
+/* --- Splash Screen (Full-screen Header) Styles --- */
+
+#splash-screen {
+    /* Makes the header take up the full browser height */
+    height: 100vh;
+    
+    background-image: url(/images/main-background.jpeg); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+
+    color: white;
+
+    /* This centers the content (h1 and nav) vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ensures it's always on top of other content */
+    position: relative;
+}
+
+#splash-screen h1 {
+    /* Large, bold text like your 'PORTFOLIO' example */
+    font-size: 7em; /* 'em' scales with the base font size */
+    font-weight: 700;
+    letter-spacing: 5px; /* Adds space between letters */
+    margin: 0;
+
+    font-family: 'Rubik Mono One', sans-serif;
+    
+    /* A subtle text shadow */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: relative; /* z-index'in çalışması için gereklidir */
+    z-index: 5; /* İmzanın arkasında kalmasını sağlar */
+}
+
+/* --- Splash Screen Navigation Styles --- */
+
+.splash-nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin-top: 40px; /* Space below the 'PORTFOLIO' title */
+    
+    /* Aligns the buttons horizontally */
+    display: flex; 
+    gap: 20px; /* Space between buttons */
+}
+
+.splash-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    
+    /* This creates the 'button' look */
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    
+    /* Simple animation */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.splash-nav a:hover {
+    /* On hover, fill the button */
+    background-color: white;
+    color: #0a192f; /* The dark navy blue */
+}
+
+/* --- Signature Styling --- */
+
+.signature {
+    /* Absolute positioning relative to #splash-screen */
+    position: absolute;
+    top: calc(50% - 130px);
+    left: calc(50% - 440px);
+
+    font-family: 'Pirata One', sans-serif; /* Yeni fontu burada kullanıyoruz */
+    font-size: 4em; /* Large size */
+    color: rgba(5, 5, 5);
+
+    z-index: 10; /* Ensures it stays above other elements */
+}
+
+/* Adjustments for smaller screens if needed (we can add more later) */
+@media (max-width: 768px) {
+    .signature {
+        font-size: 1.8em;
+        top: calc(50% - 100px);
+        left: calc(50% - 150px);
+    }
+    #splash-screen h1 {
+        font-size: 3.5em;
+    }
+}
+
+/* --- 'About Me' Section Styles --- */
+
+.about-me-container {
+    /* Uses flexbox to create the two-column layout */
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    gap: 40px; /* Space between the picture and the text */
+    
+    /* Makes columns stack on small screens */
+    flex-wrap: wrap; 
+    
+    /* Centers the whole container */
+    justify-content: center; 
+    
+    /* We'll override the default section padding */
+    padding: 60px 40px;
+}
+
+.about-me-column-left {
+    flex-basis: 300px; /* Sets a base width for the image column */
+    text-align: center;
+}
+
+.profile-picture {
+    /* Makes the placeholder image round */
+    border-radius: 50%; 
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Ensures the image covers the area */
+    border: 5px solid #0b78c3; /* Adds a blue border */
+}
+
+.about-me-column-right {
+    flex-basis: 500px; /* Sets a base width for the text column */
+    flex-grow: 1;
+}
+
+.about-me-column-right h2 {
+    /* Styling for the 'ABOUT ME' heading */
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 0;
+    border-bottom: none; /* Removes the old line */
+}
+
+.about-me-column-right p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ccd6f6; /* A lighter, softer white */
+}
+
+
+/* --- 'More Details' Button Style --- */
+
+.btn-details {
+    /* This makes the <a> tag look like a button */
+    display: inline-block; /* Allows setting margin/padding */
+    background-color: #007bff; /* A bright blue */
+    color: white;
+    padding: 12px 24px;
+    margin-top: 20px; /* Space above the button */
+    
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    border-radius: 5px;
+    
+    /* Simple animation */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #0056b3; /* A darker blue on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
 }
