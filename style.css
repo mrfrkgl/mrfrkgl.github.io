@@ -1,0 +1,213 @@
+body {
+    background-color:rgb(11, 172, 241);
+    font-family: sans-serif;   /* font-family */
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px; /* padding right/left */
+    text-align: center;
+    border-radius: 8px;
+}
+
+main {
+    padding: 20px;
+    min-height: 400px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px; /* padding all around */
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px; /* Adds space above the footer */
+}
+
+/* --- Footer Secret Link Style --- */
+
+footer a {
+    /* This makes the link's color the same as the footer's text (white) */
+    color: inherit; 
+    
+    /* This removes the default underline */
+    text-decoration: none; 
+    
+    /* This changes the cursor from the 'hand' pointer to the default arrow,
+       making it not look like a clickable link. */
+    cursor: default; 
+}
+
+/* --- Navigation Menu Styles --- */
+
+nav ul {
+    list-style-type: none; /* Removes the black bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns the menu items horizontally */
+    justify-content: center; /* Centers the menu items */
+}
+
+nav li {
+    margin: 0 15px; /* Adds space between each menu item */
+}
+
+nav a {
+    color: rgb(0, 0, 0); /* Makes the link text white */
+    text-decoration: none; /* Removes the default underline */
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd; /* Adds a slight gray color when you hover over a link */
+}
+
+/* --- Section Styles --- */
+
+section {
+    padding: 40px 20px; /* Adds internal spacing (top/bottom - left/right) */
+    margin: 20px 0; /* Adds external spacing between sections */
+    background-color: #ffffff; /* Gives each section a white background */
+    border-radius: 8px; /* Rounds the corners of the sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+}
+
+section h2 {
+    border-bottom: 2px solid #eee; /* Adds a light line under the section heading */
+    padding-bottom: 10px;
+}
+
+/* --- Secret Section Style --- */
+/* We will use this class later to hide the section */
+.hidden-section {
+    display: none; /* This completely hides the 'Mr. Faruk' section */
+}
+
+/* --- Project Gallery Styles --- */
+
+.project-container {
+    display: grid;
+    /* This creates a responsive grid. 
+       - 'auto-fit': automatically fit as many columns as possible.
+       - 'minmax(300px, 1fr)': each column will be a minimum of 300px wide, 
+         and will share the remaining space equally (1fr). */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between the cards */
+}
+
+.project-card {
+    background-color: #f9f9f9; /* A very light gray for the card background */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image's corners are also rounded */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* A very subtle shadow */
+    /* This transition is for the animation you wanted */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* This is the simple animation you requested */
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts the card up slightly */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Makes the shadow stronger */
+}
+
+.project-card img {
+    width: 100%; /* Makes the image fill the card's width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+}
+
+.project-info {
+    padding: 20px; /* Adds space inside the card, below the image */
+}
+
+.project-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Tag Styles --- */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap; /* Tags will wrap to the next line if they don't fit */
+    gap: 8px; /* Space between tags */
+    margin-top: 15px;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 15px; /* Pill-shaped tags */
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #ccc; /* Default tag color */
+    color: #333;
+}
+
+/* Specific tag colors based on your plan */
+.tag.professional { background-color: #007bff; color: white; }
+.tag.latest { background-color: #28a745; color: white; }
+.tag.beginner { background-color: #ffc107; color: #ffffff; }
+.tag.experienced { background-color: #fd7e14; color: white; }
+
+/* --- New Tag Colors for Design Section --- */
+
+.tag.video { 
+    background-color: #6f42c1; /* A nice purple */ 
+    color: white; 
+}
+
+.tag.design { 
+    background-color: #e83e8c; /* A vibrant pink */ 
+    color: white; 
+}
+
+/* --- CV Section Styles --- */
+
+.cv-container {
+    display: flex; /* This is the magic that creates columns */
+    flex-wrap: wrap; /* If the screen is too small, columns will stack */
+    gap: 40px; /* Space between the columns */
+}
+
+.cv-column {
+    /* Each column will take up roughly half the space */
+    flex: 1; 
+    min-width: 280px; /* Ensures columns don't get too squished */
+}
+
+.cv-column h3 {
+    /* A little styling for the column titles */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.cv-item {
+    margin-bottom: 20px; /* Space between each entry (e.g., university and high school) */
+}
+
+.cv-item h4 {
+    margin-bottom: 5px; /* Less space between item title and details */
+}
+
+.cv-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.cv-item ul {
+    margin-top: 10px;
+    padding-left: 20px; /* Indent the bullet points */
+    font-size: 0.9em;
+    color: #555;
+}
