@@ -4,65 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Site</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- Ortak Stiller -->
+    <link rel="stylesheet" href="cv.css">    <!-- Sayfaya Özel Stiller -->
+    <script src="script.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Ömer Faruk (CV & Experience)</h1>
-        <nav>
+<body class="page-cv">
+    <header id="splash-screen">
+        <span class="signature">Ömer Faruk's</span>
+        <!-- Navigation Arrows -->
+        <div class="splash-arrow-container">
+            <a href="index.html" class="splash-arrow left"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="technic.html" class="splash-arrow right"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        <h1>CV </h1>
+        <nav class="splash-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
                 <li><a href="technic.html">Technic</a></li>
                 <li><a href="design.html">Design</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="content">
         <section id="cv">
-            <h2>Ömer Faruk (CV & Experience)</h2>
+            <h2>CV & Experience</h2>
 
             <div class="cv-container">
-
                 <div class="cv-column">
                     <h3>Education</h3>
                     <div class="cv-item">
-                        <h4>University Name</h4>
-                        <p><strong>Degree Name (e.g., BSc in Computer Science)</strong> | 2020 - 2024</p>
-                        <p>Short description about your studies or key achievements.</p>
+                        <h4>Istanbul Topkapi University</h4>
+                        <p><strong>Bachelor's Degree, Management Information Systems (English)</strong> | 2023 - 2028</p>
+                        <ul>
+                            <li>GPA: 3.53</li>
+                            <li>Full ÖSYM Scholarship</li>
+                            <li>Graduated from English Preparatory Class with a B2 level.</li>
+                            <li>Project Unit Manager at the Artificial Intelligence Club.</li>
+                        </ul>
                     </div>
                     <div class="cv-item">
-                        <h4>High School Name</h4>
-                        <p><strong>Field of Study</strong> | 2016 - 2020</p>
+                        <h4>Harvard University</h4>
+                        <p><strong>CS50's Introduction to Computer Science</strong> | 2021</p>
+                        <p>Completed ten problem sets, ten labs, and a final project.</p>
                     </div>
                 </div>
 
                 <div class="cv-column">
                     <h3>Experience</h3>
                     <div class="cv-item">
-                        <h4>Company Name</h4>
-                        <p><strong>Job Title (e.g., Intern Developer)</strong> | Jun 2023 - Aug 2023</p>
+                        <h4>TeknoFSM - Fatih, Istanbul</h4>
+                        <p><strong>Project Coordinator & R&D Manager</strong> | Jun 2023 - Present</p>
                         <ul>
-                            <li>Responsibility or achievement 1.</li>
-                            <li>Responsibility or achievement 2.</li>
+                            <li>Led and coordinated interdisciplinary technology projects.</li>
+                            <li>Gained hands-on experience in software development, electronics, and research.</li>
+                            <li>Developed competencies in project management, teamwork, mentoring, and leadership.</li>
                         </ul>
                     </div>
                     <div class="cv-item">
-                        <h4>Another Company / Project</h4>
-                        <p><strong>Job Title</strong> | 2022</p>
-                         <ul>
-                            <li>Responsibility or achievement 1.</li>
+                        <h4>ETHR - East Turkistan Human Rights Watch Association - Fatih, Istanbul</h4>
+                        <p><strong>Video Editing and Post-Production Intern</strong> | Jul 2025 - Present</p>
+                        <ul>
+                            <li>Edited vertical video content for social media.</li>
+                            <li>Involved in color correction, sound mixing, and subtitle creation.</li>
+                            <li>Learned to use Adobe Premiere Pro at a basic level and CapCut/Canva professionally.</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <h4>Fennaver Academy - Şişli, Istanbul</h4>
+                        <p><strong>Technical Project Coordinator</strong> | Sep 2023 - Jul 2024</p>
+                        <ul>
+                            <li>Coordinated student R&D projects in software, electronics, and hardware.</li>
+                            <li>Provided training on project development processes based on Google's "Project 101".</li>
+                            <li>Conducted practical training on 3D printer usage, report writing, and academic citation.</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <h4>VisionAI Tech - Fatih, Istanbul</h4>
+                        <p><strong>Intern</strong> | Jun 2022 - Jan 2023</p>
+                        <ul>
+                            <li>Participated in the design and development of the startup's official website.</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
+
+            <div class="cv-container">
+                <div class="cv-column">
+                    <h3>Technical Skills</h3>
+                    <p>Project Management, Team Management, Canva & CapCut, Microsoft Office, Academic Research, Python, C/C++, Robotic Coding, Generative AI, 3D Modeling/Printing.</p>
+                </div>
+                <div class="cv-column">
+                    <h3>Certifications, Projects & Awards</h3>
+                    <ul>
+                        <li><strong>Certifications:</strong> Project Management Fundamentals (BTK), Business and Personal Marketing (Living Lab), Teknofest and Design Thinking (Living Lab).</li>
+                        <li><strong>Projects:</strong> PhsyioTerra (Wearable gamified physiotherapy), Hi-Glove (Sign language to voice/text translation).</li>
+                        <li><strong>Awards:</strong> TÜBİTAK 2204-A 2020 Regional 2nd Place, 8th Başakşehir Living Lab High School Category 2nd Place, Teknofest 2023 Finalist.</li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
     </main>
 
     <footer>
         <p><a href="index.html#mr-faruk">&copy; 2025 Ömer Faruk Gül</a></p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#top" id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></a>
+    
+    
+
 </body>
 </html>
